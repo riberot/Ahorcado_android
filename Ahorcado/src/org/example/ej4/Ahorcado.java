@@ -20,11 +20,13 @@ public class Ahorcado extends Activity {
 	private ImageView imagen;
 	private int fallos;
 	private int aciertos;
-	private String[] diccionario = { "MERLUZO", "ZOPENCO",
-			"PUCH", "BERBERECHO", "MENEILLOS", "BENDER", "ZOIDBERG",
-			"SNORLAX", "HOMER", "EPISODIO", "GUARDIOLA", "RENAULT",
-			"VOLKSWAGEN", "SCHWARZENEGGER", "PATATUELA", "MACHAQUITO", "BAILEYS",
-			"METACRILATO", "OTORRINO", "OFTALMOLOGO", "PSICOKILLER" };
+	private String[] diccionario = { "MERLUZO", "ZOPENCO", "PUCH",
+			"BERBERECHO", "MENEILLOS", "BENDER", "ZOIDBERG", "SNORLAX",
+			"HOMER", "EPISODIO", "GUARDIOLA", "RENAULT", "VOLKSWAGEN",
+			"SCHWARZENEGGER", "PATATUELA", "MACHAQUITO", "BAILEYS",
+			"METACRILATO", "OTORRINO", "OFTALMOLOGO", "PSICOKILLER", "DANKO",
+			"BOOGIEMAN", "EFERALGAN", "RIBONUCLEICO", "TUETANO", "PIRUETA",
+			"VELOCIRAPTOR", "STALLONE", "CHIMPOKOMON", "KENNY" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +77,7 @@ public class Ahorcado extends Activity {
 		for (int i = 0; i < this.palabra.length(); i++) {
 			if (letra == this.palabra.toUpperCase().charAt(i)) {
 				// this.palabraMostrada[i]=letra;
-				palabraMostrada.setCharAt(i*2, letra);
+				palabraMostrada.setCharAt(i * 2, letra);
 				pantallita.setText(palabraMostrada);
 				aciertos++;
 				hayAciertos = true;
